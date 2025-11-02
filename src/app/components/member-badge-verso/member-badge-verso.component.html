@@ -1,11 +1,11 @@
-<div class="w-sm h-full flex flex-col items-center justify-between border rounded-sm shadow-xl bg-white overflow-hidden p-1 text-xs text-justify" style="font-family: 'Times New Roman', Times, serif;">
+<div class="w-md h-full flex flex-col items-center justify-between border rounded-sm shadow-xl bg-white overflow-hidden p-1 text-xs text-justify" style="font-family: 'Times New Roman', Times, serif;">
 
     <div class="w-32">
         <app-acm-logo />
     </div>
 
     <div class="">
-        <app-qr-code />
+        <app-qr-code [link]="getLink()"/>
     </div>
 
     <div>

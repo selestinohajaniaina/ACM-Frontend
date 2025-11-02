@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-qr-code',
@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './qr-code.component.css'
 })
 export class QrCodeComponent {
-
+  @Input() link!: string;
 }

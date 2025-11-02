@@ -11,11 +11,12 @@ import { ListValueComponent } from '../list-value/list-value.component';
 import { AddMemberComponent } from '../add-member/add-member.component';
 import { AppComponent } from '../../app.component';
 import { RouterModule } from '@angular/router';
+import { MemberBadgeComponent } from '../member-badge/member-badge.component';
 
 @Component({
   selector: 'app-member-card-detail',
   standalone: true,
-  imports: [ImgRoundComponent, TitleComponent, TextDescriptionComponent, MemberDescriptionComponent, CommonModule, ListValueComponent, AddMemberComponent, RouterModule],
+  imports: [ImgRoundComponent, TitleComponent, TextDescriptionComponent, MemberDescriptionComponent, CommonModule, ListValueComponent, AddMemberComponent, RouterModule, MemberBadgeComponent],
   templateUrl: './member-card-detail.component.html',
   styleUrl: './member-card-detail.component.css'
 })
@@ -23,6 +24,7 @@ export class MemberCardDetailComponent {
   @Input() member!: Member;
   private URL: string = environment.FILEURL;
   public showAddForm: boolean = false;
+  public showCard: boolean = false;
 
   constructor(private app: AppComponent) {}
 
@@ -50,6 +52,14 @@ export class MemberCardDetailComponent {
 
   updateMember() {
     this.showAddForm = true;
+  }
+
+  close() {
+    this.showCard = false;
+  }
+
+  open() {
+    this.showCard = true;
   }
 
 }

@@ -1,4 +1,5 @@
 export const environment = {
     URL: '',
-    FILEURL: ''
+    FILEURL: '',
+    STATICWEBURL: ''
 };

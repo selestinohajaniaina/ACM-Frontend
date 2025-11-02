@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { AcmLogoComponent } from '../acm-logo/acm-logo.component';
 import { QrCodeComponent } from '../qr-code/qr-code.component';
+import { environment } from '../../../environments/environment.development';
 
 @Component({
   selector: 'app-member-badge-verso',
@@ -10,5 +11,10 @@ import { QrCodeComponent } from '../qr-code/qr-code.component';
   styleUrl: './member-badge-verso.component.css'
 })
 export class MemberBadgeVersoComponent {
+  @Input() registrationNumber!: string;
+  private URL: string = environment.STATICWEBURL;
 
+  getLink(): string {
+    return `${this.URL}/member?reg=${this.registrationNumber}`;
+  }
 }
