@@ -4,8 +4,13 @@ import { MembersComponent } from './pages/members/members.component';
 import { ProfilComponent } from './pages/profil/profil.component';
 import { AuthComponent } from './pages/auth/auth.component';
 import { CardsComponent } from './pages/cards/cards.component';
+import { ActivityComponent } from './pages/activity/activity.component';
 
 export const routes: Routes = [
+    {
+        path: 'auth',
+        component: AuthComponent
+    },
     {
         path: '',
         component: HomeComponent
@@ -23,7 +28,8 @@ export const routes: Routes = [
         component: CardsComponent
     },
     {
-        path: 'auth',
-        component: AuthComponent
-    }
+        path: 'activity',
+        component: ActivityComponent
+    },
+    
 ];
