@@ -30,5 +30,10 @@ export class FlexMenusComponent {
       label: 'Volunteer',
       exact: false
     },
+    {
+      route: '/activity',
+      label: 'Activity',
+      exact: false
+    },
   ];
 }
