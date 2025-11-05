@@ -1,5 +1,5 @@
 export const environment = {
-    URL: '',
-    FILEURL: '',
+    URL: 'https://acm-backend-iwde.onrender.com/api',
+    FILEURL: 'https://acm-backend-iwde.onrender.com/uploads',
     STATICWEBURL: ''
 };
