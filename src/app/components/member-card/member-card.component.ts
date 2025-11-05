@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Member } from '../../interfaces/member';
-import { environment } from '../../../environments/environment.development';
+import { environment } from '../../../environments/environment';
 import dayjs from 'dayjs';
 import { ImgRoundComponent } from '../img-round/img-round.component';
 import { TitleComponent } from '../title/title.component';
