@@ -5,7 +5,7 @@ import { TitleComponent } from '../title/title.component';
 import { TextDescriptionComponent } from '../text-description/text-description.component';
 import { MemberDescriptionComponent } from '../member-description/member-description.component';
 import { CommonModule } from '@angular/common';
-import { environment } from '../../../environments/environment.development';
+import { environment } from '../../../environments/environment';
 import dayjs from 'dayjs';
 import { ListValueComponent } from '../list-value/list-value.component';
 import { AddMemberComponent } from '../add-member/add-member.component';

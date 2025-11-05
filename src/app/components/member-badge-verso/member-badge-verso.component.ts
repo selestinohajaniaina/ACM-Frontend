@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { AcmLogoComponent } from '../acm-logo/acm-logo.component';
 import { QrCodeComponent } from '../qr-code/qr-code.component';
-import { environment } from '../../../environments/environment.development';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-member-badge-verso',
