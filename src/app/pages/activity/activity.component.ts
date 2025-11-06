@@ -15,8 +15,11 @@ import { TableActivitiesComponent } from '../../components/table-activities/tabl
 })
 export class ActivityComponent {
   private activity!: Activity[];
+  public activityToUpdate!: Activity;
   public activityFilter!: Activity[];
   public showAddForm: boolean = false;
+  public title: string = 'New Activity';
+  public mode: 'insert' | 'update' = 'insert';
 
   constructor(private activityService: ActivityService, private app: AppComponent) {}
 
@@ -47,6 +50,19 @@ export class ActivityComponent {
 
   showAlert(event: any) {
     this.app.showToast(event);
+  }
+
+  clickEdit(event: Activity) {
+    this.mode = 'update';
+    this.showAddForm = true;
+    this.activityToUpdate = event;
+  }
+
+  showToast(event: any) {
+    if(event) this.showAddForm = false;
+    this.app.showToast(event.message);
+    this.activityToUpdate = event.data;
+    this.getActivityList();
   }
 
 }

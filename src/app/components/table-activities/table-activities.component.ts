@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Activity } from '../../interfaces/activity';
 
 @Component({
@@ -10,4 +10,9 @@ import { Activity } from '../../interfaces/activity';
 })
 export class TableActivitiesComponent {
   @Input() data!: Activity[];
+  @Output('editClicked') emiterEdit = new EventEmitter<Activity>();
+
+  updateMember(activity: Activity) {
+    this.emiterEdit.emit(activity);
+  }
 }

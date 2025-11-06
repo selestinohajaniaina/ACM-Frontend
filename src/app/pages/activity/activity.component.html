@@ -12,11 +12,11 @@
         </button>
     </div>
 
-    <app-table-activities [data]="activityFilter"/>
+    <app-table-activities [data]="activityFilter" (editClicked)="clickEdit($event)"/>
 
 
 </div>
 
 @if(showAddForm) {
-    <app-add-activity mode="insert" title="New Activity" (showToast)="showAlert($event)" (canceled)="cancelForm($event)"/>
+    <app-add-activity [mode]="mode" [title]="title" [activityToUpdate]="activityToUpdate" (updatedData)="showToast($event)" (showToast)="showAlert($event)" (canceled)="cancelForm($event)"/>
 }
