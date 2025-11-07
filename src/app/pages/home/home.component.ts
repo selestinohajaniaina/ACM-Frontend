@@ -4,11 +4,12 @@ import { DashboardService } from '../../services/dashboard.service';
 import { HttpResult } from '../../types/httpResult';
 import { Checkin } from '../../interfaces/checkin';
 import { TableCheckinsComponent } from '../../components/table-checkins/table-checkins.component';
+import { CardStatisticSkeletonComponent } from '../../components/card-statistic-skeleton/card-statistic-skeleton.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CardStatisticComponent, TableCheckinsComponent],
+  imports: [CardStatisticComponent, TableCheckinsComponent, CardStatisticSkeletonComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
