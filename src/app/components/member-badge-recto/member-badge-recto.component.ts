@@ -14,6 +14,7 @@ import { environment } from '../../../environments/environment';
 export class MemberBadgeRectoComponent {
   @Input() member!: Member;
   private URL: string = environment.FILEURL;
+  @Input() checkData!: { stamp: boolean, signature: boolean };
 
   formatDate(date?: Date | string) {
     if (!date) return 'no date';

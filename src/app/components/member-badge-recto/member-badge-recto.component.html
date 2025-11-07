@@ -1,6 +1,6 @@
 <div class="w-md mx-auto border rounded-sm shadow-xl bg-white overflow-hidden p-1 text-nowrap" style="font-family: 'Times New Roman', Times, serif;">
     <!-- Header -->
-    <div class="flex">
+    <div class="flex border relative">
         <!-- Photo -->
         <div class="w-28 h-28 rounded overflow-hidden flex-shrink-0">
             <img
@@ -9,6 +9,8 @@
             class="w-full h-full object-cover"
             />
         </div>
+
+        @if(checkData.stamp) { <img class="absolute w-48 top-1/5 opacity-50 left-1/6" [src]="getfileUrl('tapon.png')" alt="tapon image"/> }
 
         <div class="w-full">
             <div class="text-center pb-2 h-fit w-full text-nowrap text-sm font-bold text-gray-900 dark:text-white">
@@ -81,8 +83,9 @@
         </div>
     </div>
 
-    <div class="text-center text-xs">
+    <div class="text-center text-xs relative">
         <p class="font-semibold pb-8 pt-2">The Responsible</p>
+        @if(checkData.signature) { <img class="absolute w-16 left-3/7 bottom-0" [src]="getfileUrl('signature.png')" alt="tapon image"/> }
     </div>
  
 </div>

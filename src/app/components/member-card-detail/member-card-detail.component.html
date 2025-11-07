@@ -2,8 +2,8 @@
     <div class="rounded-lg shadow-2xl bg-white dark:bg-gray-800 opacity-75 m-6">
     
         <div *ngIf="member" class="p-12 text-center">
-            <app-img-round [imgUrl]="getfileUrl(member?.profileImage)"/>
-            <app-title [titleText]="member?.lastName + ' ' + member?.firstName"/>
+            <app-img-round [imgUrl]="getfileUrl(member.profileImage)"/>
+            <app-title [titleText]="member.lastName + ' ' + member.firstName"/>
             <div class="mx-auto w-4/5 pt-3 border-b-2 border-green-500 opacity-25"></div>
             <div *ngIf="member.id" class="text-left">
                 <div class="mt-6 border-t border-gray-100">

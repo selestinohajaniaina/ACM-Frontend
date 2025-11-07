@@ -12,4 +12,5 @@ import { Member } from '../../interfaces/member';
 })
 export class MemberBadgeComponent {
   @Input() member!: Member;
+  @Input() checkData!: { stamp: boolean, signature: boolean };
 }

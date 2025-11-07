@@ -5,7 +5,7 @@
             <label [for]="memberChoose.member.registrationNumber" class="absolute top-0 left-0 w-full h-full cursor-pointer"></label>
         </div>
         <div class="w-14 h-14 rounded-full overflow-hidden">
-            <img [src]="getfileUrl(memberChoose.member?.profileImage)" alt="profile image" class="w-full h-full object-cover object-center">
+            <img [src]="getfileUrl(memberChoose.member.profileImage)" alt="profile image" class="w-full h-full object-cover object-center">
         </div>
         <div class="">
             <h5 class="text-xl font-bold text-gray-800">{{ memberChoose.member.firstName + ' ' + memberChoose.member.lastName }}</h5>

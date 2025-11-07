@@ -3,7 +3,9 @@
     <div class="flex justify-between items-center">
         <h1 class="text-xl font-bold text-blue-500 my-4">Overview</h1>
     </div>
-    @if(statistics) {
+    @if(!statistics) {
+        <app-card-statistic-skeleton />
+    } @else {
         <div class="flex gap-4">
             <app-card-statistic [data]="{title: 'Members', value: statistics.member, icon: 'people'}" />
             <app-card-statistic [data]="{title: 'Activities', value: statistics.activity, icon: 'event'}"/>
@@ -13,7 +15,9 @@
     <div class="flex justify-between items-center">
         <h1 class="text-xl font-bold text-blue-500 my-4">In Room</h1>
     </div>
-    @if(statistics) {
+    @if(!statistics) {
+        <app-card-statistic-skeleton />
+    } @else {
         <div class="flex gap-4">
             <app-card-statistic [data]="{title: 'Members', value: statistics.checkins.length, icon: 'people'}" />
         </div>
