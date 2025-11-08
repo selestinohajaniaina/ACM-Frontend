@@ -5,11 +5,12 @@ import { ActivityService } from '../../services/activity.service';
 import { AppComponent } from '../../app.component';
 import { HttpResult } from '../../types/httpResult';
 import { TableActivitiesComponent } from '../../components/table-activities/table-activities.component';
+import { TableLoadingComponent } from '../../components/table-loading/table-loading.component';
 
 @Component({
   selector: 'app-activity',
   standalone: true,
-  imports: [AddActivityComponent, TableActivitiesComponent],
+  imports: [AddActivityComponent, TableActivitiesComponent, TableLoadingComponent],
   templateUrl: './activity.component.html',
   styleUrl: './activity.component.css'
 })

@@ -12,7 +12,12 @@
         </button>
     </div>
 
-    <app-table-activities [data]="activityFilter" (editClicked)="clickEdit($event)"/>
+    <app-table-loading [data]="{ columns: ['Name', 'Description', 'Actif', 'Action'], textLoading: 'Finding activities...'}"/>
+    @if(!activityFilter) {
+    } @else {
+        <app-table-activities [data]="activityFilter" (editClicked)="clickEdit($event)"/>
+    }
+
 
 
 </div>
