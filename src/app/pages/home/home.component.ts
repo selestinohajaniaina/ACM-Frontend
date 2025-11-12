@@ -20,9 +20,8 @@ export class HomeComponent {
     member: number,
     activity: number,
   }
-
   constructor(private dashboard: DashboardService) {}
-
+  
   ngOnInit() {
     this.getStatistic();
   }
@@ -32,8 +31,7 @@ export class HomeComponent {
       .subscribe((result: HttpResult) => {
         if(result.success) {
           this.statistics = result.data;
-          console.log(result);
-          
+          console.log(result);       
         }
       })
   }
