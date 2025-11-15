@@ -17,8 +17,8 @@ import { TableLoadingComponent } from '../../components/table-loading/table-load
 export class HomeComponent {
   public statistics!: {
     checkins: Checkin[],
-    member: number,
-    activity: number,
+    members: number,
+    activities: number,
   }
   constructor(private dashboard: DashboardService) {}
   
